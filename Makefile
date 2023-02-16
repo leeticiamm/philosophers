@@ -1,6 +1,6 @@
 NAME = philosophers
 
-SRCS = philosophers.c is_valid_digit.c
+SRCS = philosophers.c is_valid_digit.c ft_atoi.c routine.c utils.c init_forks.c
 
 OBJS = ${SRCS:.c=.o}
 

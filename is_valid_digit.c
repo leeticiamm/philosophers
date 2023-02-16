@@ -6,7 +6,7 @@
 /*   By: lmagalha <lmagalha@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 01:11:41 by lmagalha          #+#    #+#             */
-/*   Updated: 2023/02/11 05:00:36 by lmagalha         ###   ########.fr       */
+/*   Updated: 2023/02/16 17:48:12 by lmagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	is_valid_digit(char *num[])
 	{
 		while (num[i][j])
 		{
-			if (ft_isdigit(num[i][j] == 1))
+			if (ft_isdigit(num[i][j]) == 1)
 				return (1);
 			j++;
 		}
