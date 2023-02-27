@@ -6,7 +6,7 @@
 /*   By: lmagalha <lmagalha@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 18:36:58 by lmagalha          #+#    #+#             */
-/*   Updated: 2023/02/27 10:53:13 by lmagalha         ###   ########.fr       */
+/*   Updated: 2023/02/27 11:45:38 by lmagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	init_philos(t_data *data, char *argv[])
 	int		i;
 	long	last_meal;
 
-	i = 0;
+	i = -1;
 	data->num_philos = ft_atoi(argv[1]);
 	data->time_to_die = ft_atoi(argv[2]);
 	data->time_to_eat = ft_atoi(argv[3]);
@@ -28,7 +28,7 @@ void	init_philos(t_data *data, char *argv[])
 	else
 		data->must_eat = -1;
 	data->philo = malloc(sizeof(t_philo) * data->num_philos);
-	while (i < data->num_philos)
+	while (++i < data->num_philos)
 	{
 		data->philo[i].id = i + 1;
 		data->philo[i].left_hand = i;
@@ -37,7 +37,6 @@ void	init_philos(t_data *data, char *argv[])
 		data->philo[i].last_meal = last_meal;
 		data->philo[i].data = data;
 		data->philo[i].satisfied = 0;
-		i++;
 	}
 	init_forks(data);
 }
