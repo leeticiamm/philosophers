@@ -6,7 +6,7 @@
 /*   By: lmagalha <lmagalha@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 18:36:14 by lmagalha          #+#    #+#             */
-/*   Updated: 2023/02/16 17:47:45 by lmagalha         ###   ########.fr       */
+/*   Updated: 2023/02/16 18:50:23 by lmagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_philo
 	int				left_hand;
 	long			last_meal;
 	int				count_meals;
+	int				satisfied;
 	pthread_t		thread_id;
 	struct s_data	*data;
 }					t_philo;

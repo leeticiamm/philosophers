@@ -6,7 +6,7 @@
 /*   By: lmagalha <lmagalha@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 15:20:43 by lmagalha          #+#    #+#             */
-/*   Updated: 2023/02/16 17:55:57 by lmagalha         ###   ########.fr       */
+/*   Updated: 2023/02/16 18:41:00 by lmagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ void	eat(t_data *data, t_philo *philo)
 		pthread_mutex_unlock(&(data->forks[philo->right_hand]));
 		return ;
 	}
+	philo->count_meals++;
 	printing(data, philo, 'e');
 	philo->last_meal = get_time();
 	smart_sleep(data, philo, data->time_to_eat);
-	philo->count_meals++;
 	pthread_mutex_unlock(&(data->forks[philo->left_hand]));
 	pthread_mutex_unlock(&(data->forks[philo->right_hand]));
 }

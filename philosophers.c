@@ -6,7 +6,7 @@
 /*   By: lmagalha <lmagalha@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 18:36:58 by lmagalha          #+#    #+#             */
-/*   Updated: 2023/02/16 17:48:04 by lmagalha         ###   ########.fr       */
+/*   Updated: 2023/02/16 18:50:17 by lmagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	init_philos(t_data *data, char *argv[])
 		data->philo[i].count_meals = 0;
 		data->philo[i].last_meal = last_meal;
 		data->philo[i].data = data;
+		data->philo[i].satisfied = 0;
 		i++;
 	}
 	init_forks(data);

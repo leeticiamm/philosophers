@@ -6,7 +6,7 @@
 /*   By: lmagalha <lmagalha@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 14:28:42 by lmagalha          #+#    #+#             */
-/*   Updated: 2023/02/16 17:57:05 by lmagalha         ###   ########.fr       */
+/*   Updated: 2023/02/16 18:50:01 by lmagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,11 @@ int	check_must_eat(t_data *data, t_philo *philo)
 		pthread_mutex_unlock(&data->check);
 		return (1);
 	}
-	else if (philo->count_meals == data->must_eat)
+	else if (philo->count_meals == data->must_eat && philo->satisfied == 0)
+	{
+		philo->satisfied = 1;
 		data->finish_meal++;
+	}
 	pthread_mutex_unlock(&data->check);
 	return (0);
 }
